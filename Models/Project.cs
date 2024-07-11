@@ -7,15 +7,15 @@ namespace DevCard.Models
 {
     public class Project
     {
-        public long ID { get; set; }
+        public long Id { get; set; }
         public string  Name { get; set; }
         public string Image { get; set; }
         public string  Discription { get; set; }
         public string Clinet { get; set; }
 
-        public Project(long Id, string name, string image, string discription, string clinet)
+        public Project(long id, string name, string image, string discription, string clinet)
         {
-            ID = Id;
+            Id = id;
             Name = name;
             Image = image;
             Discription = discription;

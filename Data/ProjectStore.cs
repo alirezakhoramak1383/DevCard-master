@@ -18,5 +18,10 @@ namespace DevCard.Data
                 new Project(4,"فضا پیما","project-4.jpg","برنامه مدیریت فضا پیما های ناسا","NASA")
             };
         }
+
+        public static Project GetProjectBy(long id)
+        {
+            return GetProjects().FirstOrDefault(x => x.Id == id);
+        }
     }
 }

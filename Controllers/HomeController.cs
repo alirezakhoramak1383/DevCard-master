@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using DevCard.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.VisualStudio.Web.CodeGeneration;
@@ -28,6 +29,13 @@ namespace DevCard.Controllers
         {
             return View();
         }
+
+        public IActionResult ProjctDetails(long id)
+        {
+            var Project = ProjectStore.GetProjectBy(id);
+            return View(Project);
+        }
+
         [HttpGet]
         public IActionResult Contact()
         {
